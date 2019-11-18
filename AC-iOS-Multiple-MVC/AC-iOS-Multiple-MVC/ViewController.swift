@@ -20,6 +20,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        animals = ZooAnimal.zooAnimals
         tableView.dataSource = self
     }
     
@@ -37,14 +38,16 @@ extension ViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "AnimalCell", for: indexPath) as? AnimalCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "animalCell", for: indexPath) as? AnimalCell else {
             // explicitly crashes the app at runtime if a CountryCell does not exist
             // this is a developer error
             fatalError("coudn't dequeue a CountryCell")
         }
         
         let animal = animals[indexPath.row]
+        
         cell.configureCell(for: animal)
+        
         return cell
         
     }

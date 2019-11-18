@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Zoo Animals-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AC_iOS_Multiple_MVC" customModuleProvider="target" sceneMemberID="viewController">
@@ -36,13 +36,13 @@
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Animal Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CuY-DM-Pe0">
                                                     <rect key="frame" x="148" y="40" width="246" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Animal Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="noG-kt-9Da">
-                                                    <rect key="frame" x="148" y="70" width="246" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <rect key="frame" x="148" y="70" width="246" height="18"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -80,7 +80,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="n8t-LJ-Jvc"/>
+                    <navigationItem key="navigationItem" title="Zoo Animals" id="n8t-LJ-Jvc"/>
                     <connections>
                         <outlet property="tableView" destination="Azt-QP-kBd" id="Ipz-s6-cc3"/>
                     </connections>
@@ -97,22 +97,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="V9P-o0-UZK">
-                                <rect key="frame" x="0.0" y="88" width="414" height="242"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="V9P-o0-UZK">
+                                <rect key="frame" x="0.0" y="140" width="414" height="242"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="krR-zg-PgQ">
-                                <rect key="frame" x="20" y="360" width="374" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="krR-zg-PgQ">
+                                <rect key="frame" x="20" y="390" width="374" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="krR-zg-PgQ" firstAttribute="top" secondItem="V9P-o0-UZK" secondAttribute="bottom" constant="8" id="6Vl-WH-1Qj"/>
+                            <constraint firstItem="krR-zg-PgQ" firstAttribute="leading" secondItem="gOW-ip-U17" secondAttribute="leading" constant="20" id="7jc-kS-dRa"/>
+                            <constraint firstItem="gOW-ip-U17" firstAttribute="trailing" secondItem="krR-zg-PgQ" secondAttribute="trailing" constant="20" id="Biv-64-ReK"/>
+                            <constraint firstItem="V9P-o0-UZK" firstAttribute="leading" secondItem="gOW-ip-U17" secondAttribute="leading" id="M9K-KX-JQe"/>
+                            <constraint firstItem="V9P-o0-UZK" firstAttribute="top" secondItem="gOW-ip-U17" secondAttribute="top" id="TgN-gK-WLh"/>
+                            <constraint firstItem="V9P-o0-UZK" firstAttribute="height" secondItem="EUT-jR-eQH" secondAttribute="height" multiplier="0.270089" id="c6j-hZ-ad3"/>
+                            <constraint firstItem="V9P-o0-UZK" firstAttribute="trailing" secondItem="gOW-ip-U17" secondAttribute="trailing" id="tV0-Au-TXL"/>
+                            <constraint firstItem="V9P-o0-UZK" firstAttribute="centerX" secondItem="EUT-jR-eQH" secondAttribute="centerX" id="uc6-M2-HhJ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="gOW-ip-U17"/>
                     </view>
                     <navigationItem key="navigationItem" id="0Mb-zg-BYU"/>
+                    <connections>
+                        <outlet property="animalDescriptionLabel" destination="krR-zg-PgQ" id="rfv-Up-79j"/>
+                        <outlet property="animalImageView" destination="V9P-o0-UZK" id="mcd-M3-nIf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="43l-yB-Zcx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

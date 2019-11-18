@@ -11,22 +11,19 @@ import UIKit
 class AnimalDetailController: UIViewController {
     
     var animals: ZooAnimal?
+    
+    @IBOutlet weak var animalImageView: UIImageView!
+    @IBOutlet weak var animalDescriptionLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        updateUI()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func updateUI() {
+        animalImageView.image = UIImage(named: (animals?.imageNumber)?.description ?? "")
+        animalDescriptionLabel.text = animals?.info
+        title = animals?.name
     }
-    */
 
 }
