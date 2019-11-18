@@ -101,7 +101,7 @@
                                 <rect key="frame" x="0.0" y="140" width="414" height="242"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="krR-zg-PgQ">
-                                <rect key="frame" x="20" y="390" width="374" height="20.5"/>
+                                <rect key="frame" x="20" y="422" width="374" height="440"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -109,14 +109,15 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="krR-zg-PgQ" firstAttribute="top" secondItem="V9P-o0-UZK" secondAttribute="bottom" constant="8" id="6Vl-WH-1Qj"/>
-                            <constraint firstItem="krR-zg-PgQ" firstAttribute="leading" secondItem="gOW-ip-U17" secondAttribute="leading" constant="20" id="7jc-kS-dRa"/>
-                            <constraint firstItem="gOW-ip-U17" firstAttribute="trailing" secondItem="krR-zg-PgQ" secondAttribute="trailing" constant="20" id="Biv-64-ReK"/>
+                            <constraint firstItem="krR-zg-PgQ" firstAttribute="leading" secondItem="gOW-ip-U17" secondAttribute="leading" constant="20" id="3XL-Of-4E2"/>
+                            <constraint firstItem="gOW-ip-U17" firstAttribute="trailing" secondItem="krR-zg-PgQ" secondAttribute="trailing" constant="20" id="Lfa-7v-l5o"/>
                             <constraint firstItem="V9P-o0-UZK" firstAttribute="leading" secondItem="gOW-ip-U17" secondAttribute="leading" id="M9K-KX-JQe"/>
                             <constraint firstItem="V9P-o0-UZK" firstAttribute="top" secondItem="gOW-ip-U17" secondAttribute="top" id="TgN-gK-WLh"/>
                             <constraint firstItem="V9P-o0-UZK" firstAttribute="height" secondItem="EUT-jR-eQH" secondAttribute="height" multiplier="0.270089" id="c6j-hZ-ad3"/>
                             <constraint firstItem="V9P-o0-UZK" firstAttribute="trailing" secondItem="gOW-ip-U17" secondAttribute="trailing" id="tV0-Au-TXL"/>
                             <constraint firstItem="V9P-o0-UZK" firstAttribute="centerX" secondItem="EUT-jR-eQH" secondAttribute="centerX" id="uc6-M2-HhJ"/>
+                            <constraint firstItem="krR-zg-PgQ" firstAttribute="top" secondItem="V9P-o0-UZK" secondAttribute="bottom" constant="40" id="w7E-or-ypn"/>
+                            <constraint firstItem="gOW-ip-U17" firstAttribute="bottom" secondItem="krR-zg-PgQ" secondAttribute="bottom" id="wy3-C2-Uqv"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gOW-ip-U17"/>
                     </view>

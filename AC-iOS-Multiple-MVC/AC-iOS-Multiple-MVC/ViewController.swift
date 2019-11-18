@@ -12,7 +12,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    var animals = [ZooAnimal]() {
+    var animals = [[ZooAnimal]]() {
         didSet {
             tableView.reloadData()
         }
@@ -20,7 +20,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        animals = ZooAnimal.zooAnimals
+        animals = [ZooAnimal.zooAnimals]
         tableView.dataSource = self
     }
     
@@ -28,7 +28,7 @@ class ViewController: UIViewController {
         guard let AnimalDetailController = segue.destination as? AnimalDetailController, let indexPath = tableView.indexPathForSelectedRow else {
             return
         }
-        AnimalDetailController.animals = animals[indexPath.row]
+        AnimalDetailController.animals = animals[indexPath.section][indexPath.row]
     }
 }
 
@@ -44,11 +44,19 @@ extension ViewController: UITableViewDataSource {
             fatalError("coudn't dequeue a CountryCell")
         }
         
-        let animal = animals[indexPath.row]
+        let animal = animals[indexPath.section][indexPath.row]
         
         cell.configureCell(for: animal)
         
         return cell
         
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return animals.count
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return animals[section].first?.classification
     }
 }
