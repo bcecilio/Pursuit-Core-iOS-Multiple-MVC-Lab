@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="130" id="B4x-3J-oN5">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="animalCell" rowHeight="130" id="B4x-3J-oN5" customClass="AnimalCell" customModule="AC_iOS_Multiple_MVC" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="130"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="B4x-3J-oN5" id="ME4-Tz-e2t">
@@ -48,6 +48,9 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="animalImageView" destination="E5g-ni-j5I" id="2nX-Xn-1tB"/>
+                                            <outlet property="animalLocationLabel" destination="noG-kt-9Da" id="f2E-W9-vTf"/>
+                                            <outlet property="animalNameLabel" destination="CuY-DM-Pe0" id="hQf-tC-znW"/>
                                             <segue destination="qMF-sd-dDQ" kind="show" id="rhv-wX-8H2"/>
                                         </connections>
                                     </tableViewCell>
@@ -69,10 +72,10 @@
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="116.51785714285714"/>
         </scene>
-        <!--View Controller-->
+        <!--Animal Detail Controller-->
         <scene sceneID="icE-YM-f6A">
             <objects>
-                <viewController id="qMF-sd-dDQ" sceneMemberID="viewController">
+                <viewController id="qMF-sd-dDQ" customClass="AnimalDetailController" customModule="AC_iOS_Multiple_MVC" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EUT-jR-eQH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -103,8 +106,8 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TST-zg-qbn" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="37k-uh-4kZ">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="37k-uh-4kZ">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
