@@ -20,7 +20,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        animals = [ZooAnimal.zooAnimals]
+        animals = ZooAnimal.getSection()
         tableView.dataSource = self
     }
     
